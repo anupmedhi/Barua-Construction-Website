@@ -21,13 +21,13 @@ export const metadata: Metadata = {
     description: company.description,
     type: "website",
     locale: "en_IN",
-    images: [{ url: "/images/hero-residence.png", width: 1536, height: 1024 }],
+    images: [{ url: "/images/hero-residence.jpg", width: 1536, height: 1024 }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Barua Construction",
     description: company.description,
-    images: ["/images/hero-residence.png"],
+    images: ["/images/hero-residence.jpg"],
   },
 };
 

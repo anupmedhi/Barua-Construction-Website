@@ -21,7 +21,7 @@ export const projects: Project[] = [
     status: "Ongoing",
     description:
       "A considered residential address where contemporary design, comfort, and community come together.",
-    image: assetPath("/images/shri-bishnu.png"),
+    image: assetPath("/images/shri-bishnu.jpg"),
     type: "Premium Residences",
     featured: true,
   },
@@ -32,7 +32,7 @@ export const projects: Project[] = [
     status: "Upcoming",
     description:
       "Thoughtfully planned urban homes defined by generous light, refined finishes, and effortless connectivity.",
-    image: assetPath("/images/hero-residence.png"),
+    image: assetPath("/images/hero-residence.jpg"),
     type: "Urban Residences",
     featured: true,
   },
@@ -43,7 +43,7 @@ export const projects: Project[] = [
     status: "Completed",
     description:
       "A calm residential community built around landscaped open spaces and enduring material quality.",
-    image: assetPath("/images/shri-bishnu.png"),
+    image: assetPath("/images/shri-bishnu.jpg"),
     type: "Garden Residences",
     featured: true,
   },
@@ -54,7 +54,7 @@ export const projects: Project[] = [
     status: "Completed",
     description:
       "A modern commercial destination designed for visibility, efficiency, and long-term business value.",
-    image: assetPath("/images/hero-residence.png"),
+    image: assetPath("/images/hero-residence.jpg"),
     type: "Commercial",
   },
 ];

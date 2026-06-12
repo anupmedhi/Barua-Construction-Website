@@ -123,7 +123,7 @@ export default function Home() {
           <div className="grid grid-cols-[minmax(0,1fr)] overflow-hidden rounded-3xl border border-[#dce9e6] bg-white shadow-[0_20px_70px_rgba(20,63,67,0.10)] lg:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)]">
           <Reveal className="h-full min-w-0">
             <div className="relative aspect-[4/3] h-full min-h-72 min-w-0 overflow-hidden sm:min-h-80 lg:aspect-auto lg:min-h-[720px]">
-              <Image src={assetPath("/images/shri-bishnu.png")} alt="Barua Construction residence" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" />
+              <Image src={assetPath("/images/shri-bishnu.jpg")} alt="Barua Construction residence" fill loading="lazy" decoding="async" className="object-cover" sizes="(max-width: 1024px) calc(100vw - 40px), 46vw" />
               <div className="absolute bottom-5 left-5 rounded-2xl bg-white p-4 shadow-lg">
                 <div className="flex items-center gap-1 text-gold"><Star size={16} fill="currentColor" /><strong className="text-sm text-navy">18+ years</strong></div>
                 <p className="mt-1 text-xs text-slate">Building trust across Assam</p>

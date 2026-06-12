@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Shri Bishnu by Barua Construction",
     description: "A considered residential address for modern living in Guwahati.",
-    images: ["/images/shri-bishnu.png"],
+    images: ["/images/shri-bishnu.jpg"],
   },
 };
 
@@ -68,7 +68,7 @@ export default function ShriBishnuPage() {
     <>
       <section className="bg-white px-5 pb-8 pt-24 md:pb-12 md:pt-28 lg:px-8">
         <div className="relative mx-auto flex min-h-[650px] max-w-7xl items-end overflow-hidden rounded-3xl bg-navy text-white">
-          <Image src={assetPath("/images/shri-bishnu.png")} alt="Shri Bishnu premium residential development" fill priority className="object-cover object-[68%_center] md:object-center" sizes="100vw" />
+          <Image src={assetPath("/images/shri-bishnu.jpg")} alt="Shri Bishnu premium residential development" fill priority className="object-cover object-[68%_center] md:object-center" sizes="100vw" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/25 to-transparent" />
           <div className="relative w-full p-6 pb-12 md:p-14 md:pb-16">
           <div>
@@ -114,10 +114,10 @@ export default function ShriBishnuPage() {
           </div>
           <div className="mt-12 grid gap-4 md:grid-cols-2">
             <div className="relative aspect-[4/3] overflow-hidden rounded-2xl md:row-span-2 md:aspect-auto">
-              <Image src={assetPath("/images/shri-bishnu.png")} alt="Shri Bishnu exterior" fill className="object-cover transition duration-700 hover:scale-105" sizes="(max-width: 768px) 100vw, 50vw" />
+              <Image src={assetPath("/images/shri-bishnu.jpg")} alt="Shri Bishnu exterior" fill className="object-cover transition duration-700 hover:scale-105" sizes="(max-width: 768px) calc(100vw - 40px), 50vw" />
             </div>
             <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
-              <Image src={assetPath("/images/hero-residence.png")} alt="Shri Bishnu architectural mood" fill className="object-cover transition duration-700 hover:scale-105" sizes="(max-width: 768px) 100vw, 50vw" />
+              <Image src={assetPath("/images/hero-residence.jpg")} alt="Shri Bishnu architectural mood" fill className="object-cover transition duration-700 hover:scale-105" sizes="(max-width: 768px) calc(100vw - 40px), 50vw" />
             </div>
             <div className="group grid aspect-[4/3] place-items-center rounded-2xl bg-navy text-white">
               <div className="text-center">

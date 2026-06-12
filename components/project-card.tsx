@@ -8,7 +8,7 @@ export function ProjectCard({ project }: { project: Project }) {
     <article className="group min-w-0">
       <Link href={project.slug === "shri-bishnu" ? "/projects/shri-bishnu" : "/contact"} className="block">
         <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-slate-200">
-          <Image src={project.image} alt={project.name} fill className="object-cover transition duration-700 group-hover:scale-105" sizes="(max-width: 768px) 100vw, 50vw" />
+          <Image src={project.image} alt={project.name} fill loading="lazy" decoding="async" className="object-cover transition duration-700 group-hover:scale-105" sizes="(max-width: 640px) calc(100vw - 40px), (max-width: 1024px) 50vw, 33vw" />
           <span className="absolute left-4 top-4 rounded-full bg-white px-3 py-1.5 text-xs font-semibold text-navy shadow-sm">
             {project.status}
           </span>

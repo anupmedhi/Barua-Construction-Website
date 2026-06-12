@@ -30,7 +30,7 @@ export default function AboutPage() {
           </Reveal>
           <Reveal delay={0.1}>
             <div className="relative aspect-[5/4] overflow-hidden rounded-3xl">
-              <Image src={assetPath("/images/hero-residence.png")} alt="Barua Construction architecture" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" />
+              <Image src={assetPath("/images/hero-residence.jpg")} alt="Barua Construction architecture" fill className="object-cover" sizes="(max-width: 1024px) calc(100vw - 40px), 50vw" />
               <div className="absolute bottom-5 left-5 rounded-2xl bg-white p-5 text-navy shadow-lg">
                 <p className="font-display text-2xl font-semibold">Since 2008</p>
                 <p className="mt-1 text-xs text-slate">Building across Assam</p>
