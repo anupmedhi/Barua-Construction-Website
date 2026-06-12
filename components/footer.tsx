@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight, Clock3, Facebook, Instagram, Linkedin, Mail, MapPin, Phone } from "lucide-react";
+import { Clock3, Facebook, Instagram, Linkedin, Mail, MapPin, Phone } from "lucide-react";
 import { company, navigation } from "@/data/settings";
 import { assetPath } from "@/lib/site";
 
@@ -13,17 +13,7 @@ export function Footer() {
   return (
     <footer className="bg-[#eef7f5] text-navy">
       <div className="mx-auto max-w-7xl px-5 pb-8 pt-12 md:pb-10 md:pt-16 lg:px-8">
-        <div className="flex flex-col gap-6 rounded-3xl bg-navy p-6 text-white shadow-[0_18px_55px_rgba(20,63,67,0.16)] sm:flex-row sm:items-center sm:justify-between md:p-8">
-          <div>
-            <p className="text-sm font-semibold text-white/60">Start a conversation</p>
-            <h2 className="mt-2 max-w-xl text-2xl font-semibold tracking-[-0.03em] sm:text-3xl">Looking for the right home or investment?</h2>
-          </div>
-          <Link href="/contact" className="inline-flex min-h-12 shrink-0 items-center justify-center gap-2 rounded-xl bg-white px-5 py-3 text-sm font-semibold text-navy transition hover:bg-cloud">
-            Contact our team <ArrowUpRight size={17} />
-          </Link>
-        </div>
-
-        <div className="grid gap-9 py-10 md:grid-cols-[1.15fr_0.75fr_1.1fr] md:gap-10 md:py-14">
+        <div className="grid gap-9 pb-2 md:grid-cols-[1.15fr_0.75fr_1.1fr] md:gap-10 md:pb-4">
           <div>
             <div className="inline-flex rounded-2xl bg-white p-3 shadow-sm">
               <Image src={assetPath("/images/barua-logo.jpg")} alt="Barua Constructions" width={360} height={150} className="h-auto w-[165px] object-contain" />
