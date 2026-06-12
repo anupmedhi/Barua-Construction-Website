@@ -5,7 +5,7 @@ import { Project } from "@/data/projects";
 
 export function ProjectCard({ project }: { project: Project }) {
   return (
-    <article className="group">
+    <article className="group min-w-0">
       <Link href={project.slug === "shri-bishnu" ? "/projects/shri-bishnu" : "/contact"} className="block">
         <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-slate-200">
           <Image src={project.image} alt={project.name} fill className="object-cover transition duration-700 group-hover:scale-105" sizes="(max-width: 768px) 100vw, 50vw" />
@@ -16,13 +16,16 @@ export function ProjectCard({ project }: { project: Project }) {
             <Heart size={18} />
           </span>
         </div>
-        <div className="px-1 pb-3 pt-4">
-          <div className="flex items-start justify-between gap-3">
-            <h3 className="text-base font-semibold text-navy">{project.name}</h3>
-            <span className="shrink-0 text-sm text-slate">{project.type}</span>
+        <div className="min-w-0 px-1 pb-3 pt-4">
+          <div className="flex min-w-0 flex-col gap-1 sm:flex-row sm:items-start sm:justify-between sm:gap-3">
+            <h3 className="min-w-0 text-base font-semibold leading-6 text-navy">{project.name}</h3>
+            <span className="text-sm leading-6 text-slate sm:shrink-0">{project.type}</span>
           </div>
-          <p className="mt-1 flex items-center gap-1.5 text-sm text-slate"><MapPin size={14} />{project.location}</p>
-          <p className="mt-2 line-clamp-2 text-sm leading-6 text-slate">{project.description}</p>
+          <p className="mt-2 flex min-w-0 items-start gap-1.5 text-sm leading-6 text-slate">
+            <MapPin size={14} className="mt-1 shrink-0" />
+            <span>{project.location}</span>
+          </p>
+          <p className="mt-2 line-clamp-3 text-sm leading-6 text-slate sm:line-clamp-2">{project.description}</p>
         </div>
       </Link>
     </article>

@@ -107,9 +107,9 @@ export default function Home() {
 
       <section className="bg-cloud py-16 md:py-24">
         <div className="mx-auto max-w-7xl px-5 lg:px-8">
-          <div className="grid overflow-hidden rounded-3xl border border-[#dce9e6] bg-white shadow-[0_20px_70px_rgba(20,63,67,0.10)] lg:grid-cols-[0.92fr_1.08fr]">
-          <Reveal className="h-full">
-            <div className="relative aspect-[4/3] h-full min-h-80 overflow-hidden lg:aspect-auto lg:min-h-[720px]">
+          <div className="grid grid-cols-[minmax(0,1fr)] overflow-hidden rounded-3xl border border-[#dce9e6] bg-white shadow-[0_20px_70px_rgba(20,63,67,0.10)] lg:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)]">
+          <Reveal className="h-full min-w-0">
+            <div className="relative aspect-[4/3] h-full min-h-72 min-w-0 overflow-hidden sm:min-h-80 lg:aspect-auto lg:min-h-[720px]">
               <Image src={assetPath("/images/shri-bishnu.png")} alt="Barua Construction residence" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" />
               <div className="absolute bottom-5 left-5 rounded-2xl bg-white p-4 shadow-lg">
                 <div className="flex items-center gap-1 text-gold"><Star size={16} fill="currentColor" /><strong className="text-sm text-navy">18+ years</strong></div>
@@ -117,8 +117,8 @@ export default function Home() {
               </div>
             </div>
           </Reveal>
-          <Reveal delay={0.08} className="h-full">
-            <div className="flex h-full flex-col justify-center p-6 md:p-10 lg:p-12">
+          <Reveal delay={0.08} className="h-full min-w-0">
+            <div className="flex h-full min-w-0 flex-col justify-center p-5 sm:p-6 md:p-10 lg:p-12">
               <div className="mb-5 inline-flex w-fit items-center gap-2 rounded-full bg-cloud px-3.5 py-2 text-xs font-semibold text-gold">
                 <ShieldCheck size={15} /> The Barua promise
               </div>
@@ -129,12 +129,12 @@ export default function Home() {
                 ["Designed around real life", "Practical layouts, generous light, and spaces that feel good to live in."],
                 ["Here for the long term", "A local team with a reputation built over years, not campaigns."],
               ].map(([title, text], index) => (
-                <div key={title} className="group flex gap-4 rounded-2xl border border-[#e7e7e7] p-4 transition hover:border-[#b7d8d3] hover:bg-cloud/50">
+                <div key={title} className="group flex min-w-0 gap-3 rounded-2xl border border-[#e7e7e7] p-4 transition hover:border-[#b7d8d3] hover:bg-cloud/50 sm:gap-4">
                   <span className="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-cloud text-xs font-bold text-gold transition group-hover:bg-[#dff1ed]">
                     0{index + 1}
                   </span>
-                  <div>
-                    <h3 className="font-semibold text-navy">{title}</h3>
+                  <div className="min-w-0">
+                    <h3 className="font-semibold leading-6 text-navy">{title}</h3>
                     <p className="mt-1 text-sm leading-6 text-slate">{text}</p>
                   </div>
                 </div>

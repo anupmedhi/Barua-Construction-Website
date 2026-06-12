@@ -10,11 +10,11 @@ type Props = {
 
 export function SectionHeading({ eyebrow, title, description, align = "left", light }: Props) {
   return (
-    <div className={cn("max-w-2xl", align === "center" && "mx-auto text-center")}>
+    <div className={cn("min-w-0 max-w-2xl", align === "center" && "mx-auto text-center")}>
       <p className={cn("mb-3 text-sm font-semibold", light ? "text-white/65" : "text-gold")}>
         {eyebrow}
       </p>
-      <h2 className={cn("font-display text-3xl font-semibold leading-tight tracking-[-0.03em] md:text-4xl", light ? "text-white" : "text-navy")}>
+      <h2 className={cn("break-words font-display text-3xl font-semibold leading-tight tracking-[-0.03em] md:text-4xl", light ? "text-white" : "text-navy")}>
         {title}
       </h2>
       {description && (
