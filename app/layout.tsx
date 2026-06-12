@@ -9,7 +9,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.baruaconstruction.com"),
+  metadataBase: new URL("https://baruaconstructions.in"),
   title: {
     default: "Barua Construction | Premium Real Estate in Guwahati",
     template: "%s | Barua Construction",

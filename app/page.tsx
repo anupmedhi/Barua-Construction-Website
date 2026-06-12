@@ -8,6 +8,9 @@ import { Button } from "@/components/ui/button";
 import { projects } from "@/data/projects";
 import { assetPath } from "@/lib/site";
 
+const heroBlur =
+  "data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 10'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop stop-color='%233a403c'/%3E%3Cstop offset='.55' stop-color='%2370695d'/%3E%3Cstop offset='1' stop-color='%23262f2b'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath fill='url(%23g)' d='M0 0h16v10H0z'/%3E%3C/svg%3E";
+
 const categories = [
   { icon: Building2, eyebrow: "Residences", label: "Premium homes", detail: "Designed for everyday comfort" },
   { icon: Construction, eyebrow: "In the pipeline", label: "Upcoming projects", detail: "New developments taking shape" },
@@ -28,7 +31,17 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-5 lg:px-8">
           <div className="relative">
             <div className="relative min-h-[620px] overflow-hidden rounded-3xl bg-navy md:min-h-[680px]">
-              <Image src={assetPath("/images/hero-residence.png")} alt="Contemporary Barua Construction residence" fill priority className="object-cover object-[72%_center] md:object-center" sizes="100vw" />
+              <Image
+                src={assetPath("/images/hero-residence.jpg")}
+                alt="Contemporary Barua Construction residence"
+                fill
+                priority
+                loading="eager"
+                placeholder="blur"
+                blurDataURL={heroBlur}
+                className="object-cover object-[72%_center] md:object-center"
+                sizes="(max-width: 1280px) 100vw, 1280px"
+              />
               <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/35 to-black/5" />
               <div className="relative flex min-h-[620px] items-end p-6 pb-28 text-white md:min-h-[680px] md:p-14 md:pb-32">
                 <div className="max-w-4xl">
