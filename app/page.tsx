@@ -31,17 +31,17 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-5 lg:px-8">
           <div className="relative">
             <div className="relative min-h-[620px] overflow-hidden rounded-3xl bg-navy md:min-h-[680px]">
-              <Image
-                src={assetPath("/images/hero-residence.jpg")}
-                alt="Contemporary Barua Construction residence"
-                fill
-                priority
-                loading="eager"
-                placeholder="blur"
-                blurDataURL={heroBlur}
-                className="object-cover object-[72%_center] md:object-center"
-                sizes="(max-width: 1280px) 100vw, 1280px"
-              />
+              <picture>
+                <source media="(max-width: 767px)" srcSet={assetPath("/images/hero-residence-mobile.jpg")} />
+                <img
+                  src={assetPath("/images/hero-residence.jpg")}
+                  alt="Contemporary Barua Construction residence"
+                  fetchPriority="high"
+                  decoding="async"
+                  className="absolute inset-0 h-full w-full object-cover object-[72%_center] md:object-center"
+                  style={{ backgroundImage: `url("${heroBlur}")`, backgroundSize: "cover" }}
+                />
+              </picture>
               <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/35 to-black/5" />
               <div className="relative flex min-h-[620px] items-end p-6 pb-28 text-white md:min-h-[680px] md:p-14 md:pb-32">
                 <div className="max-w-4xl">
