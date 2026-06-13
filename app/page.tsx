@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, ArrowUpRight, Building2, CheckCircle2, Construction, MapPin, Search, ShieldCheck, Star } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Building2, CheckCircle2, Construction, Home as HomeIcon, MapPin, Ruler, Search, ShieldCheck, Star } from "lucide-react";
 import { ProjectCard } from "@/components/project-card";
 import { Reveal } from "@/components/reveal";
 import { SectionHeading } from "@/components/section-heading";
@@ -19,9 +19,9 @@ const categories = [
 ];
 
 const stats = [
-  { value: "18+", label: "years building in Assam" },
-  { value: "1M+", label: "sq. ft. planned and delivered" },
-  { value: "500+", label: "families served" },
+  { value: "18+", label: "Years of experience", detail: "Building across Assam since 2008", icon: ShieldCheck },
+  { value: "1M+", label: "Square feet", detail: "Planned and delivered with care", icon: Ruler },
+  { value: "500+", label: "Families served", detail: "Homes shaped around real lives", icon: HomeIcon },
 ];
 
 export default function Home() {
@@ -162,14 +162,39 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-16 md:py-20">
-        <div className="mx-auto grid max-w-7xl gap-4 px-5 md:grid-cols-3 lg:px-8">
-          {stats.map((stat) => (
-            <div key={stat.label} className="rounded-2xl border border-[#dddddd] p-7">
-              <p className="text-4xl font-semibold tracking-[-0.04em] text-navy">{stat.value}</p>
-              <p className="mt-2 text-sm text-slate">{stat.label}</p>
+      <section className="bg-white py-16 md:py-24">
+        <div className="mx-auto max-w-7xl px-5 lg:px-8">
+          <div className="overflow-hidden rounded-3xl bg-navy text-white shadow-[0_24px_70px_rgba(20,63,67,0.16)]">
+            <div className="grid gap-8 px-6 pb-7 pt-8 md:px-10 md:pb-10 md:pt-11 lg:grid-cols-[0.72fr_1.28fr] lg:items-end lg:px-12">
+              <div>
+                <p className="text-sm font-semibold text-[#76c6bd]">Built on measurable trust</p>
+                <h2 className="mt-3 max-w-md text-3xl font-semibold leading-tight tracking-[-0.035em] md:text-4xl">
+                  Experience you can count on.
+                </h2>
+              </div>
+              <p className="max-w-2xl text-sm leading-7 text-white/65 md:text-base">
+                Every number reflects years of consistent work, thoughtful planning, and relationships that continue long after handover.
+              </p>
             </div>
-          ))}
+            <div className="grid gap-px bg-white/10 sm:grid-cols-3">
+              {stats.map((stat, index) => {
+                const Icon = stat.icon;
+                return (
+                  <div key={stat.label} className="group relative bg-[#18494d] p-6 transition hover:bg-[#1c5256] md:p-8">
+                    <div className="flex items-start justify-between gap-4">
+                      <span className="grid h-11 w-11 place-items-center rounded-2xl bg-white/10 text-[#8bd6cd]">
+                        <Icon size={20} strokeWidth={1.8} />
+                      </span>
+                      <span className="text-xs font-semibold tracking-[0.12em] text-white/30">0{index + 1}</span>
+                    </div>
+                    <p className="mt-8 text-5xl font-semibold tracking-[-0.055em] text-white md:text-6xl">{stat.value}</p>
+                    <p className="mt-3 text-sm font-semibold text-white">{stat.label}</p>
+                    <p className="mt-1 text-sm leading-6 text-white/55">{stat.detail}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
         </div>
       </section>
 
