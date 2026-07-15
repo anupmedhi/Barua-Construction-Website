@@ -17,11 +17,11 @@ export const projects: Project[] = [
   {
     slug: "shri-bishnu",
     name: "Shri Bishnu",
-    location: "Guwahati, Assam",
+    location: "Ahomgaon, Guwahati",
     status: "Ongoing",
     description:
-      "A considered residential address where contemporary design, comfort, and community come together.",
-    image: assetPath("/images/shri-bishnu.jpg"),
+      "Premium residential apartments near Sanskriti The Gurukul School, just off NH 715.",
+    image: assetPath("/images/shri-bishnu-brochure/render-front-web.jpg"),
     type: "Premium Residences",
     featured: true,
   },
