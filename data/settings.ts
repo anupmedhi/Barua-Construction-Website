@@ -6,11 +6,11 @@ export const company = {
     "Premium construction and real estate developments crafted for modern living.",
   phone: "+91 91010 28103",
   email: "baruaconstructions@gmail.com",
-  address: "G.S. Road, Guwahati, Assam 781005",
+  address: "H No. 1, Mother Teresa Road, Gitali Path, Gitanagar, Noonmati, Kamrup, GMC, Assam 781020, India",
   hours: "Monday - Saturday, 9:30 AM - 6:30 PM",
   socials: {
-    instagram: "#",
-    facebook: "#",
+    instagram: "https://www.instagram.com/baruaconstructions/",
+    facebook: "https://www.facebook.com/people/Barua-Construction/61570186719535/",
     linkedin: "#",
   },
 };

@@ -9,8 +9,10 @@ export const metadata: Metadata = {
   description: "Contact Barua Construction for project enquiries, partnerships, and construction services.",
 };
 
+const officeMapQuery = encodeURIComponent(company.address);
+
 const details = [
-  { icon: MapPin, label: "Visit our office", value: company.address, href: "https://maps.google.com/?q=G.S.+Road+Guwahati" },
+  { icon: MapPin, label: "Visit our office", value: company.address, href: `https://www.google.com/maps/search/?api=1&query=${officeMapQuery}` },
   { icon: Phone, label: "Call us", value: company.phone, href: `tel:${company.phone}` },
   { icon: Mail, label: "Email us", value: company.email, href: `mailto:${company.email}` },
   { icon: Clock3, label: "Business hours", value: company.hours },
@@ -55,7 +57,7 @@ export default function ContactPage() {
         <div className="mx-auto max-w-7xl overflow-hidden rounded-3xl bg-cloud">
           <iframe
             title="Barua Construction office map"
-            src="https://www.google.com/maps?q=G.S.%20Road%2C%20Guwahati%2C%20Assam&output=embed"
+            src={`https://www.google.com/maps?q=${officeMapQuery}&output=embed`}
             className="h-[420px] w-full border-0 grayscale-[35%]"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"

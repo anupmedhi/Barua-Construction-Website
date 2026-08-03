@@ -37,10 +37,10 @@ const schema = {
   telephone: company.phone,
   address: {
     "@type": "PostalAddress",
-    streetAddress: "G.S. Road",
+    streetAddress: "H No. 1, Mother Teresa Road, Gitali Path, Gitanagar, Noonmati",
     addressLocality: "Guwahati",
     addressRegion: "Assam",
-    postalCode: "781005",
+    postalCode: "781020",
     addressCountry: "IN",
   },
 };
