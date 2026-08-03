@@ -26,8 +26,10 @@ export function Footer() {
                 [Linkedin, "LinkedIn", company.socials.linkedin],
               ].map(([Icon, label, href]) => {
                 const SocialIcon = Icon as typeof Instagram;
+                const socialHref = href as string;
+                const isExternal = socialHref.startsWith("http");
                 return (
-                  <a key={label as string} href={href as string} aria-label={label as string} className="grid h-10 w-10 place-items-center rounded-full border border-[#cfe2de] bg-white text-navy transition hover:border-gold hover:text-gold">
+                  <a key={label as string} href={socialHref} aria-label={label as string} target={isExternal ? "_blank" : undefined} rel={isExternal ? "noreferrer" : undefined} className="grid h-10 w-10 place-items-center rounded-full border border-[#cfe2de] bg-white text-navy transition hover:border-gold hover:text-gold">
                     <SocialIcon size={17} />
                   </a>
                 );
