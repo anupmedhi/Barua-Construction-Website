@@ -6,7 +6,7 @@ import { ChevronDown } from "lucide-react";
 const faqs = [
   {
     question: "Where is Shri Bishnu located?",
-    answer: "Shri Bishnu is located at Ahomgaon, Guwahati, just off NH 715. The brochure lists the coordinates as 26°06'17.6\"N, 91°43'04.4\"E.",
+    answer: "Shri Bishnu is located at Nibari Boro Path, Bhabananda Boro Path, Ahomgaon, Guwahati 781035, just off NH 715. The brochure lists the coordinates as 26°06'17.6\"N, 91°43'04.4\"E.",
   },
   {
     question: "Which blocks and apartment areas are shown?",
