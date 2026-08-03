@@ -3,11 +3,14 @@ import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowRight,
+  Building2,
   Car,
   Check,
   Download,
+  FileCheck2,
   GraduationCap,
   Hospital,
+  MapPin,
   Route,
   Sparkles,
   Store,
@@ -24,7 +27,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Shri Bishnu by Barua Construction",
     description: "A premium residential apartment complex at Ahomgaon, Guwahati.",
-    images: ["/images/shri-bishnu-brochure/render-front-web.jpg"],
+    images: ["/images/shri-bishnu/hero-road-view.jpg"],
   },
 };
 
@@ -53,10 +56,10 @@ const specifications = [
 ];
 
 const overviewFacts = [
-  { label: "Location", value: "Ahomgaon, Guwahati" },
-  { label: "Nearby access", value: "Just off NH 715" },
-  { label: "Project blocks", value: "Block A & Block B" },
-  { label: "RERA", value: "RERA/ASM/1433/2025/SUPD/339" },
+  { icon: MapPin, label: "Location", value: "Ahomgaon, Guwahati" },
+  { icon: Route, label: "Connectivity", value: "Just off NH 715" },
+  { icon: Building2, label: "Development", value: "Block A & Block B" },
+  { icon: FileCheck2, label: "RERA registered", value: "RERA/ASM/1433/2025/SUPD/339" },
 ];
 
 const nearbyPlaces = [
@@ -90,6 +93,39 @@ const floorPlanImages = [
   { title: "Block B upper floors", src: "/images/shri-bishnu-brochure/block-b-upper-floor.jpg" },
 ];
 
+const galleryImages = [
+  {
+    title: "Road-facing arrival view",
+    src: "/images/shri-bishnu/hero-road-view.jpg",
+    alt: "Road-facing rendered view of Shri Bishnu",
+  },
+  {
+    title: "Front elevation",
+    src: "/images/shri-bishnu/front-master-view.jpg",
+    alt: "Front elevation render of Shri Bishnu",
+  },
+  {
+    title: "Evening street view",
+    src: "/images/shri-bishnu/evening-street-view.jpg",
+    alt: "Evening street view render of Shri Bishnu",
+  },
+  {
+    title: "Aerial day view",
+    src: "/images/shri-bishnu/aerial-day-view.jpg",
+    alt: "Aerial daytime render of Shri Bishnu",
+  },
+  {
+    title: "Twilight frontage",
+    src: "/images/shri-bishnu/twilight-front-view.jpg",
+    alt: "Twilight frontage render of Shri Bishnu",
+  },
+  {
+    title: "Green neighbourhood view",
+    src: "/images/shri-bishnu/aerial-green-view.jpg",
+    alt: "Aerial green neighbourhood render of Shri Bishnu",
+  },
+];
+
 const paymentSchedule = [
   ["Booking", "10%"],
   ["Agreement", "25%"],
@@ -106,7 +142,7 @@ export default function ShriBishnuPage() {
     <>
       <section className="bg-white px-5 pb-8 pt-24 md:pb-12 md:pt-28 lg:px-8">
         <div className="relative mx-auto flex min-h-[650px] max-w-7xl items-end overflow-hidden rounded-3xl bg-navy text-white">
-          <Image src={assetPath("/images/shri-bishnu-brochure/render-front-web.jpg")} alt="Shri Bishnu premium residential development" fill priority className="object-cover object-[56%_center] md:object-center" sizes="100vw" />
+          <Image src={assetPath("/images/shri-bishnu/hero-road-view.jpg")} alt="Shri Bishnu premium residential development" fill priority className="object-cover object-[46%_center] md:object-center" sizes="100vw" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/25 to-transparent" />
           <div className="relative w-full p-6 pb-12 md:p-14 md:pb-16">
           <div>
@@ -123,23 +159,34 @@ export default function ShriBishnuPage() {
       </section>
 
       <section id="overview" className="py-16 md:py-24">
-        <div className="mx-auto grid max-w-7xl gap-14 px-5 lg:grid-cols-[.8fr_1.2fr] lg:px-8">
-          <SectionHeading eyebrow="Project overview" title="A new expression of modern living." />
-          <div>
-            <p className="font-display text-2xl font-medium leading-relaxed tracking-[-0.02em] text-navy md:text-3xl">
-              Shri Bishnu Barua Housing Complex is a premium residential apartment complex located in Ahomgaon, Guwahati.
-            </p>
-            <p className="mt-6 text-sm leading-7 text-slate/65">
-              Ideally situated next to Sanskriti The Gurukul School and just off NH 715, the project offers easy access to ISBT, Balaji Temple, Royal Global University, Unity Mall, and essential healthcare.
-            </p>
-            <div className="mt-9 grid grid-cols-2 gap-3 sm:grid-cols-4">
-              {overviewFacts.map((fact) => (
-                <div key={fact.label} className="rounded-2xl border border-[#dddddd] bg-white p-5">
-                  <p className="text-xs font-semibold text-slate">{fact.label}</p>
-                  <p className="mt-2 text-sm font-semibold leading-5 text-navy">{fact.value}</p>
-                </div>
-              ))}
+        <div className="mx-auto max-w-7xl px-5 lg:px-8">
+          <div className="grid gap-10 lg:grid-cols-[.8fr_1.2fr] lg:gap-20">
+            <SectionHeading eyebrow="Project overview" title="A new expression of modern living." />
+            <div>
+              <p className="font-display text-2xl font-medium leading-relaxed tracking-[-0.02em] text-navy md:text-3xl">
+                Shri Bishnu Barua Housing Complex is a premium residential apartment complex located in Ahomgaon, Guwahati.
+              </p>
+              <p className="mt-6 text-sm leading-7 text-slate/65">
+                Ideally situated next to Sanskriti The Gurukul School and just off NH 715, the project offers easy access to ISBT, Balaji Temple, Royal Global University, Unity Mall, and essential healthcare.
+              </p>
             </div>
+          </div>
+          <div className="mt-12 grid overflow-hidden rounded-3xl border border-[#dddddd] bg-white shadow-[0_18px_50px_rgba(15,63,66,0.06)] sm:grid-cols-2 lg:grid-cols-4">
+            {overviewFacts.map(({ icon: Icon, label, value }, index) => (
+              <div
+                key={label}
+                className="group relative min-h-48 border-b border-[#e9e9e9] p-6 last:border-b-0 sm:[&:nth-child(odd)]:border-r sm:[&:nth-child(3)]:border-b-0 lg:min-h-52 lg:border-b-0 lg:border-r lg:p-7 lg:last:border-r-0"
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <span className="grid h-11 w-11 place-items-center rounded-2xl bg-teal/10 text-teal transition group-hover:bg-teal group-hover:text-white">
+                    <Icon size={20} strokeWidth={1.7} />
+                  </span>
+                  <span className="text-xs font-semibold tracking-[0.12em] text-slate/35">0{index + 1}</span>
+                </div>
+                <p className="mt-8 text-xs font-semibold uppercase tracking-[0.12em] text-slate/55">{label}</p>
+                <p className="mt-2 break-words text-base font-semibold leading-6 text-navy [overflow-wrap:anywhere]">{value}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -148,18 +195,20 @@ export default function ShriBishnuPage() {
         <div className="mx-auto max-w-7xl px-5 lg:px-8">
           <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
             <SectionHeading eyebrow="Gallery" title="Designed to be experienced." description="A visual story of architecture, landscape, materials, and life at Shri Bishnu." />
-            <span className="text-sm font-medium text-slate">3D rendered views from the brochure</span>
+            <span className="text-sm font-medium text-slate">Architectural 3D rendered views</span>
           </div>
-          <div className="mt-12 grid gap-4 md:grid-cols-2">
-            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl md:row-span-2 md:aspect-auto">
-              <Image src={assetPath("/images/shri-bishnu-brochure/render-front-web.jpg")} alt="Shri Bishnu exterior" fill className="object-cover transition duration-700 hover:scale-105" sizes="(max-width: 768px) calc(100vw - 40px), 50vw" />
-            </div>
-            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
-              <Image src={assetPath("/images/shri-bishnu-brochure/render-elevation-web.jpg")} alt="Shri Bishnu elevation render" fill className="object-cover transition duration-700 hover:scale-105" sizes="(max-width: 768px) calc(100vw - 40px), 50vw" />
-            </div>
-            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
-              <Image src={assetPath("/images/shri-bishnu-brochure/render-final-web.jpg")} alt="Shri Bishnu street-facing render" fill className="object-cover transition duration-700 hover:scale-105" sizes="(max-width: 768px) calc(100vw - 40px), 50vw" />
-            </div>
+          <div className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            {galleryImages.map((image, index) => (
+              <div
+                key={image.src}
+                className={index === 0 ? "relative aspect-[4/3] overflow-hidden rounded-2xl md:col-span-2 lg:row-span-2 lg:aspect-auto" : "relative aspect-[4/3] overflow-hidden rounded-2xl"}
+              >
+                <Image src={assetPath(image.src)} alt={image.alt} fill className="object-cover transition duration-700 hover:scale-105" sizes={index === 0 ? "(max-width: 1024px) calc(100vw - 40px), 66vw" : "(max-width: 768px) calc(100vw - 40px), 33vw"} />
+                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/65 to-transparent p-4 pt-14">
+                  <p className="text-sm font-semibold text-white">{image.title}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -178,34 +227,54 @@ export default function ShriBishnuPage() {
         </div>
       </section>
 
-      <section className="bg-cloud py-16 md:py-20">
-        <div className="mx-auto grid max-w-7xl gap-8 px-5 lg:grid-cols-2 lg:px-8">
-          <div>
+      <section id="floor-plans" className="scroll-mt-24 bg-cloud py-16 md:py-20">
+        <div className="mx-auto max-w-7xl px-5 lg:px-8">
+          <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
             <SectionHeading eyebrow="Floor plans" title="Well-planned from the inside out." description="Block A and Block B floor plans with saleable and carpet area references from the brochure." />
-            <div className="mt-8 grid gap-4">
-              {floorPlanImages.map((plan) => (
-                <div key={plan.title} className="overflow-hidden rounded-2xl border border-[#dddddd] bg-white">
-                  <div className="relative aspect-[16/10]">
-                    <Image src={assetPath(plan.src)} alt={plan.title} fill className="object-contain p-3" sizes="(max-width: 1024px) calc(100vw - 40px), 50vw" />
-                  </div>
-                  <p className="border-t border-[#eeeeee] px-5 py-3 text-sm font-semibold text-navy">{plan.title}</p>
-                </div>
-              ))}
-            </div>
+            <p className="max-w-xs text-sm leading-6 text-slate/55 md:text-right">Four plan references across both residential blocks.</p>
           </div>
-          <div>
-            <SectionHeading eyebrow="Location" title="Connected to what matters." description="Located at Ahomgaon, Guwahati, near key education, healthcare, and connectivity points." />
-            <div className="mt-8 overflow-hidden rounded-2xl bg-white">
-              <div className="relative aspect-[16/11]">
-                <Image src={assetPath("/images/shri-bishnu-brochure/location-map.jpg")} alt="Shri Bishnu location map" fill className="object-contain p-3" sizes="(max-width: 1024px) calc(100vw - 40px), 50vw" />
+          <div className="mt-10 grid gap-5 lg:grid-cols-2">
+            {floorPlanImages.map((plan, index) => (
+              <div key={plan.title} className="group overflow-hidden rounded-3xl border border-[#dddddd] bg-white shadow-[0_18px_45px_rgba(15,63,66,0.05)]">
+                <div className="relative aspect-[16/10] overflow-hidden bg-[#fafafa]">
+                  <Image src={assetPath(plan.src)} alt={plan.title} fill className="object-contain p-4 transition duration-500 group-hover:scale-[1.015] md:p-6" sizes="(max-width: 1024px) calc(100vw - 40px), 50vw" />
+                </div>
+                <div className="flex items-center justify-between gap-4 border-t border-[#eeeeee] px-5 py-4 md:px-6">
+                  <p className="text-sm font-semibold text-navy">{plan.title}</p>
+                  <span className="rounded-full bg-cloud px-3 py-1 text-xs font-semibold text-teal">Plan 0{index + 1}</span>
+                </div>
               </div>
-              <div className="grid gap-2 border-t border-[#eeeeee] p-5 sm:grid-cols-2">
-                {nearbyPlaces.map(([name, time]) => (
-                  <div key={name} className="flex items-center justify-between gap-4 rounded-xl bg-cloud px-4 py-3 text-sm">
-                    <span className="font-medium text-navy">{name}</span>
-                    <span className="text-slate">{time}</span>
-                  </div>
-                ))}
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="location" className="scroll-mt-24 py-16 md:py-20">
+        <div className="mx-auto max-w-7xl px-5 lg:px-8">
+          <div className="grid gap-10 lg:grid-cols-[.72fr_1.28fr] lg:items-end">
+            <SectionHeading eyebrow="Location" title="Connected to what matters." description="Located at Ahomgaon, Guwahati, near key education, healthcare, and connectivity points." />
+            <p className="max-w-xl text-sm leading-7 text-slate/60 lg:justify-self-end">Daily destinations remain comfortably close, helping residents spend less time travelling and more time at home.</p>
+          </div>
+          <div className="mt-10 grid overflow-hidden rounded-3xl border border-[#dddddd] bg-white shadow-[0_18px_50px_rgba(15,63,66,0.06)] lg:grid-cols-[1.35fr_.65fr]">
+            <div className="relative min-h-[360px] border-b border-[#eeeeee] lg:min-h-[520px] lg:border-b-0 lg:border-r">
+              <Image src={assetPath("/images/shri-bishnu-brochure/location-map.jpg")} alt="Shri Bishnu location map" fill className="object-contain p-4 md:p-7" sizes="(max-width: 1024px) calc(100vw - 40px), 65vw" />
+            </div>
+            <div className="flex flex-col justify-between p-6 md:p-8">
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.14em] text-gold">Approximate drive time</p>
+                <div className="mt-5 divide-y divide-[#e9e9e9]">
+                  {nearbyPlaces.map(([name, time]) => (
+                    <div key={name} className="flex items-center justify-between gap-5 py-4 text-sm">
+                      <span className="font-semibold text-navy">{name}</span>
+                      <span className="rounded-full bg-cloud px-3 py-1 font-semibold text-teal">{time}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div className="mt-8 rounded-2xl bg-navy p-5 text-white">
+                <MapPin size={20} className="text-gold" />
+                <p className="mt-4 text-sm font-semibold">Ahomgaon, Guwahati</p>
+                <p className="mt-1 text-xs leading-5 text-white/55">Next to Sanskriti The Gurukul School and just off NH 715.</p>
               </div>
             </div>
           </div>

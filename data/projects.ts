@@ -21,7 +21,7 @@ export const projects: Project[] = [
     status: "Ongoing",
     description:
       "Premium residential apartments near Sanskriti The Gurukul School, just off NH 715.",
-    image: assetPath("/images/shri-bishnu-brochure/render-front-web.jpg"),
+    image: assetPath("/images/shri-bishnu/hero-road-view.jpg"),
     type: "Premium Residences",
     featured: true,
   },
