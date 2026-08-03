@@ -23,10 +23,10 @@ import { assetPath } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Shri Bishnu",
-  description: "Discover Shri Bishnu, a premium residential apartment complex at Ahomgaon, Guwahati by Barua Construction.",
+  description: "Discover Shri Bishnu, a premium residential apartment complex at Nibari Boro Path, Bhabananda Boro Path, Ahomgaon, Guwahati 781035.",
   openGraph: {
     title: "Shri Bishnu by Barua Construction",
-    description: "A premium residential apartment complex at Ahomgaon, Guwahati.",
+    description: "A premium residential apartment complex at Nibari Boro Path, Bhabananda Boro Path, Ahomgaon, Guwahati 781035.",
     images: ["/images/shri-bishnu/hero-road-view.jpg"],
   },
 };
@@ -56,7 +56,7 @@ const specifications = [
 ];
 
 const overviewFacts = [
-  { icon: MapPin, label: "Location", value: "Ahomgaon, Guwahati" },
+  { icon: MapPin, label: "Location", value: "Nibari Boro Path, Bhabananda Boro Path, Ahomgaon, Guwahati 781035" },
   { icon: Route, label: "Connectivity", value: "Just off NH 715" },
   { icon: Building2, label: "Development", value: "Block A & Block B" },
   { icon: FileCheck2, label: "RERA registered", value: "RERA/ASM/1433/2025/SUPD/339" },
@@ -164,7 +164,7 @@ export default function ShriBishnuPage() {
             <SectionHeading eyebrow="Project overview" title="A new expression of modern living." />
             <div>
               <p className="font-display text-2xl font-medium leading-relaxed tracking-[-0.02em] text-navy md:text-3xl">
-                Shri Bishnu Barua Housing Complex is a premium residential apartment complex located in Ahomgaon, Guwahati.
+                Shri Bishnu Barua Housing Complex is a premium residential apartment complex located at Nibari Boro Path, Bhabananda Boro Path, Ahomgaon, Guwahati 781035.
               </p>
               <p className="mt-6 text-sm leading-7 text-slate/65">
                 Ideally situated next to Sanskriti The Gurukul School and just off NH 715, the project offers easy access to ISBT, Balaji Temple, Royal Global University, Unity Mall, and essential healthcare.
@@ -252,7 +252,7 @@ export default function ShriBishnuPage() {
       <section id="location" className="scroll-mt-24 py-16 md:py-20">
         <div className="mx-auto max-w-7xl px-5 lg:px-8">
           <div className="grid gap-10 lg:grid-cols-[.72fr_1.28fr] lg:items-end">
-            <SectionHeading eyebrow="Location" title="Connected to what matters." description="Located at Ahomgaon, Guwahati, near key education, healthcare, and connectivity points." />
+            <SectionHeading eyebrow="Location" title="Connected to what matters." description="Located at Nibari Boro Path, Bhabananda Boro Path, Ahomgaon, Guwahati 781035, near key education, healthcare, and connectivity points." />
             <p className="max-w-xl text-sm leading-7 text-slate/60 lg:justify-self-end">Daily destinations remain comfortably close, helping residents spend less time travelling and more time at home.</p>
           </div>
           <div className="mt-10 grid overflow-hidden rounded-3xl border border-[#dddddd] bg-white shadow-[0_18px_50px_rgba(15,63,66,0.06)] lg:grid-cols-[1.35fr_.65fr]">
@@ -273,7 +273,7 @@ export default function ShriBishnuPage() {
               </div>
               <div className="mt-8 rounded-2xl bg-navy p-5 text-white">
                 <MapPin size={20} className="text-gold" />
-                <p className="mt-4 text-sm font-semibold">Ahomgaon, Guwahati</p>
+                <p className="mt-4 text-sm font-semibold leading-6">Nibari Boro Path, Bhabananda Boro Path, Ahomgaon, Guwahati 781035</p>
                 <p className="mt-1 text-xs leading-5 text-white/55">Next to Sanskriti The Gurukul School and just off NH 715.</p>
               </div>
             </div>

@@ -17,7 +17,7 @@ export const projects: Project[] = [
   {
     slug: "shri-bishnu",
     name: "Shri Bishnu",
-    location: "Ahomgaon, Guwahati",
+    location: "Nibari Boro Path, Bhabananda Boro Path, Ahomgaon, Guwahati 781035",
     status: "Ongoing",
     description:
       "Premium residential apartments near Sanskriti The Gurukul School, just off NH 715.",
