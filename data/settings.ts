@@ -4,8 +4,8 @@ export const company = {
   tagline: "Building Dreams. Creating Landmarks.",
   description:
     "Premium construction and real estate developments crafted for modern living.",
-  phone: "+91 98765 43210",
-  email: "hello@baruaconstruction.com",
+  phone: "+91 91010 28103",
+  email: "baruaconstructions@gmail.com",
   address: "G.S. Road, Guwahati, Assam 781005",
   hours: "Monday - Saturday, 9:30 AM - 6:30 PM",
   socials: {

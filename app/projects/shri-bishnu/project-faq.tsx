@@ -6,19 +6,23 @@ import { ChevronDown } from "lucide-react";
 const faqs = [
   {
     question: "Where is Shri Bishnu located?",
-    answer: "The final site address and map coordinates will be published here when the project information is released.",
+    answer: "Shri Bishnu is located at Ahomgaon, Guwahati, just off NH 715. The brochure lists the coordinates as 26°06'17.6\"N, 91°43'04.4\"E.",
   },
   {
-    question: "What home configurations will be available?",
-    answer: "Detailed configuration, area, and floor plan information is being prepared and will remain editable through the project data structure.",
+    question: "Which blocks and apartment areas are shown?",
+    answer: "The brochure includes Block A and Block B floor plans, with saleable areas ranging from 537 sq. ft. to 1510 sq. ft. depending on the unit.",
   },
   {
-    question: "When is possession expected?",
-    answer: "The official construction and possession schedule will be added after confirmation by the project team.",
+    question: "Is the project RERA registered?",
+    answer: "Yes. The brochure lists the RERA number as RERA/ASM/1433/2025/SUPD/339.",
+  },
+  {
+    question: "What is the payment schedule?",
+    answer: "The brochure lists milestone-based payments from booking through handover, including 10% at booking, 25% at agreement, and staged payments during construction.",
   },
   {
     question: "How can I receive pricing and availability updates?",
-    answer: "Submit the enquiry form on this page and select Shri Bishnu. The sales team can then share the latest verified information.",
+    answer: "Submit the enquiry form on this page and select Shri Bishnu. The team can then share current pricing, availability, and booking guidance.",
   },
 ];
 
