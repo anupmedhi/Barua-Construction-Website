@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, ArrowUpRight, Building2, CheckCircle2, Construction, Home as HomeIcon, MapPin, Ruler, Search, ShieldCheck, Star } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Building2, CheckCircle2, Construction, Home as HomeIcon, MapPin, Search, ShieldCheck, Star } from "lucide-react";
 import { ProjectCard } from "@/components/project-card";
 import { Reveal } from "@/components/reveal";
 import { SectionHeading } from "@/components/section-heading";
@@ -15,13 +15,13 @@ const categories = [
   { icon: Building2, eyebrow: "Residences", label: "Premium homes", detail: "Designed for everyday comfort" },
   { icon: Construction, eyebrow: "In the pipeline", label: "Upcoming projects", detail: "New developments taking shape" },
   { icon: CheckCircle2, eyebrow: "Completed", label: "Ready homes", detail: "Projects delivered with care" },
-  { icon: ShieldCheck, eyebrow: "Our experience", label: "18+ years", detail: "Building trust across Assam" },
+  { icon: ShieldCheck, eyebrow: "Our experience", label: "20+ years", detail: "Building trust since 2004" },
 ];
 
 const stats = [
-  { value: "18+", label: "Years of experience", detail: "Building across Assam since 2008", icon: ShieldCheck },
-  { value: "1M+", label: "Square feet", detail: "Planned and delivered with care", icon: Ruler },
-  { value: "500+", label: "Families served", detail: "Homes shaped around real lives", icon: HomeIcon },
+  { value: "20+", label: "Years in real estate", detail: "A Guwahati-based legacy since 2004", icon: ShieldCheck },
+  { value: "5", label: "Completed projects", detail: "A consistent record of delivery", icon: Building2 },
+  { value: "109", label: "Homes delivered", detail: "Across five residential developments", icon: HomeIcon },
 ];
 
 export default function Home() {
@@ -125,8 +125,8 @@ export default function Home() {
             <div className="relative aspect-[4/3] h-full min-h-72 min-w-0 overflow-hidden sm:min-h-80 lg:aspect-auto lg:min-h-[720px]">
               <Image src={assetPath("/images/shri-bishnu.jpg")} alt="Barua Construction residence" fill loading="lazy" decoding="async" className="object-cover" sizes="(max-width: 1024px) calc(100vw - 40px), 46vw" />
               <div className="absolute bottom-5 left-5 rounded-2xl bg-white p-4 shadow-lg">
-                <div className="flex items-center gap-1 text-gold"><Star size={16} fill="currentColor" /><strong className="text-sm text-navy">18+ years</strong></div>
-                <p className="mt-1 text-xs text-slate">Building trust across Assam</p>
+                <div className="flex items-center gap-1 text-gold"><Star size={16} fill="currentColor" /><strong className="text-sm text-navy">Since 2004</strong></div>
+                <p className="mt-1 text-xs text-slate">Five completed developments</p>
               </div>
             </div>
           </Reveal>
