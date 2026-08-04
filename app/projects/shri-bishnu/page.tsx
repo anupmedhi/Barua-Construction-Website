@@ -150,7 +150,11 @@ export default function ShriBishnuPage() {
             <h1 className="mt-5 font-display text-5xl font-semibold leading-none tracking-[-0.045em] sm:text-6xl md:text-8xl">Shri Bishnu</h1>
             <p className="mt-5 max-w-xl text-lg leading-8 text-white/85">Where life flourishes, surrounded by nature, comfort, and a place to truly call home.</p>
             <div className="mt-9 flex flex-wrap gap-3">
-              <Button asChild><a href="#enquire">Register interest <ArrowRight size={16} /></a></Button>
+              <Button asChild>
+                <a href="https://wa.me/message/474FUGBX7ZDFC1" target="_blank" rel="noreferrer">
+                  Chat on WhatsApp <ArrowRight size={16} />
+                </a>
+              </Button>
               <Button variant="outline" asChild><a href={assetPath("/docs/shri-bishnu-brochure-summary.pdf")} download>Download brochure</a></Button>
             </div>
           </div>
