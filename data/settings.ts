@@ -3,7 +3,7 @@ export const company = {
   shortName: "BC",
   tagline: "Building Dreams. Creating Landmarks.",
   description:
-    "Premium construction and real estate developments crafted for modern living.",
+    "Guwahati-based real estate development grounded in quality, transparency, and long-term customer trust since 2004.",
   phone: "+91 91010 28103",
   email: "baruaconstructions@gmail.com",
   address: "H No. 1, Mother Teresa Road, Gitali Path, Gitanagar, Noonmati, Kamrup, GMC, Assam 781020, India",
