@@ -205,7 +205,11 @@ export default function Home() {
               <p className="text-sm font-semibold text-white/65">Ready when you are</p>
               <h2 className="mt-2 max-w-2xl text-3xl font-semibold tracking-[-0.03em] md:text-4xl">Tell us what kind of space you are looking for.</h2>
             </div>
-            <Button asChild><Link href="/contact">Start an enquiry <ArrowRight size={16} /></Link></Button>
+            <Button asChild>
+              <a href="https://wa.me/message/474FUGBX7ZDFC1" target="_blank" rel="noreferrer">
+                Chat on WhatsApp <ArrowRight size={16} />
+              </a>
+            </Button>
           </div>
         </div>
       </section>
