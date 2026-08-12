@@ -32,10 +32,10 @@ export default function Home() {
           <div className="relative">
             <div className="relative min-h-[620px] overflow-hidden rounded-3xl bg-navy md:min-h-[680px]">
               <picture>
-                <source media="(max-width: 767px)" srcSet={assetPath("/images/hero-residence-mobile.jpg")} />
+                <source media="(max-width: 767px)" srcSet={assetPath("/images/shri-bishnu/home-hero-mobile.jpg")} />
                 <img
-                  src={assetPath("/images/hero-residence.jpg")}
-                  alt="Contemporary Barua Construction residence"
+                  src={assetPath("/images/shri-bishnu/hero-road-view.jpg")}
+                  alt="Shri Bishnu residential development by Barua Construction"
                   fetchPriority="high"
                   decoding="async"
                   className="absolute inset-0 h-full w-full object-cover object-[72%_center] md:object-center"
